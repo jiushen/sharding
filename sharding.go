@@ -120,15 +120,16 @@ func (s *Sharding) Register(config Config, tables ...interface{}) *Sharding {
 			if c.NumberOfShards == 0 {
 				panic("specify NumberOfShards or ShardingAlgorithm")
 			}
-			if c.NumberOfShards < 10 {
-				c.tableFormat = "_%01d"
-			} else if c.NumberOfShards < 100 {
-				c.tableFormat = "_%02d"
-			} else if c.NumberOfShards < 1000 {
-				c.tableFormat = "_%03d"
-			} else if c.NumberOfShards < 10000 {
-				c.tableFormat = "_%04d"
-			}
+			c.tableFormat = "_%d"
+			//if c.NumberOfShards < 10 {
+			//	c.tableFormat = "_%01d"
+			//} else if c.NumberOfShards < 100 {
+			//	c.tableFormat = "_%02d"
+			//} else if c.NumberOfShards < 1000 {
+			//	c.tableFormat = "_%03d"
+			//} else if c.NumberOfShards < 10000 {
+			//	c.tableFormat = "_%04d"
+			//}
 			c.ShardingAlgorithm = func(value interface{}) (suffix string, err error) {
 				id := 0
 				switch value := value.(type) {
