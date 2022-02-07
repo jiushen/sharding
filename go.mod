@@ -4,12 +4,12 @@ go 1.17
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/jiushen/sqlparser v0.3.2
+	github.com/jiushen/sqlparser v0.3.3
 	github.com/longbridgeapp/assert v0.1.0
 	gorm.io/driver/mysql v1.2.3
 	gorm.io/driver/postgres v1.2.3
 	gorm.io/gorm v1.22.5
-	gorm.io/hints v0.0.0-20210614014355-b8cf5492cb94
+	gorm.io/hints v1.1.0
 )
 
 require (
@@ -27,7 +27,7 @@ require (
 	github.com/jinzhu/now v1.1.4 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
-	golang.org/x/crypto v0.0.0-20220126234351-aa10faf2a1f8 // indirect
+	golang.org/x/crypto v0.0.0-20220131195533-30dcbda58838 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
