@@ -324,10 +324,14 @@ func (s *Sharding) resolve(query string, args ...interface{}) (ftQuery, stQuery,
 	case *sqlparser.UpdateStatement:
 		ftQuery = stmt.String()
 		stmt.TableName = newTable
+		s.replaceTablenameInCondition(condition, tableName, newTable.Name.Name)
+		stmt.OrderBy = replaceOrderByTableName(stmt.OrderBy, tableName, newTable.Name.Name)
 		stQuery = stmt.String()
 	case *sqlparser.DeleteStatement:
 		ftQuery = stmt.String()
 		stmt.TableName = newTable
+		s.replaceTablenameInCondition(condition, tableName, newTable.Name.Name)
+		stmt.OrderBy = replaceOrderByTableName(stmt.OrderBy, tableName, newTable.Name.Name)
 		stQuery = stmt.String()
 	}
 
