@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/jiushen/sqlparser v0.3.3
+	github.com/jiushen/sqlparser v0.3.4
 	github.com/longbridgeapp/assert v0.1.0
 	gorm.io/driver/mysql v1.2.3
 	gorm.io/driver/postgres v1.2.3
