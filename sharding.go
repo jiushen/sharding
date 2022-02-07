@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/bwmarrin/snowflake"
-	"github.com/longbridgeapp/sqlparser"
+	"github.com/jiushen/sqlparser"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 )

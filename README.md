@@ -24,7 +24,7 @@ This graph show up how Gorm Sharding works.
 ## Install
 
 ```bash
-go get -u gorm.io/sharding
+go get -u github.com/jiushen/sharding
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ import (
 
   "gorm.io/driver/postgres"
   "gorm.io/gorm"
-  "gorm.io/sharding"
+  "github.com/jiushen/sharding"
 )
 
 db, err := gorm.Open(postgres.New(postgres.Config{DSN: "postgres://localhost:5432/sharding-db?sslmode=disable"))
